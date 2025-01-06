@@ -103,7 +103,7 @@ export function PaymentHistory({ onViewDetails, itemsPerPage = 5, showAllLink = 
                 <TableCell>{payment.amountPaid}</TableCell>
                 <TableCell>
                   <span className={`inline-flex rounded-full px-2 py-1 text-xs font-medium ${getStatusStyles(payment.status)}`}>
-                    {payment.status}
+                  ●{payment.status}
                   </span>
                 </TableCell>
                 <TableCell>{payment.dateCreated}</TableCell>
