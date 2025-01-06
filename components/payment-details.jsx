@@ -1,24 +1,24 @@
-'use client'
+"use client";
 
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
-} from '@/components/ui/sheet'
+} from "@/components/ui/sheet";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
+} from "@/components/ui/select";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export function PaymentDetails({ payment, open, onClose }) {
-  if (!payment) return null
+  if (!payment) return null;
 
   return (
     <Sheet open={open} onOpenChange={onClose}>
@@ -26,14 +26,10 @@ export function PaymentDetails({ payment, open, onClose }) {
         <SheetHeader>
           <SheetTitle>{payment.transactionNumber}</SheetTitle>
         </SheetHeader>
-        <div className="mt-6 space-y-6">
+        <div className="mt-6 space-y-6 ">
           <div className="space-y-2">
             <Label htmlFor="customerName">Customer's name</Label>
-            <Input
-              id="customerName"
-              value={payment.customerName}
-              readOnly
-            />
+            <Input id="customerName" value={payment.customerName} readOnly />
           </div>
           <div className="space-y-2">
             <Label htmlFor="customerEmail">Customer's Email</Label>
@@ -63,18 +59,16 @@ export function PaymentDetails({ payment, open, onClose }) {
                 <SelectContent>
                   <SelectItem value="New">New</SelectItem>
                   <SelectItem value="Shipped">Shipped</SelectItem>
-                  <SelectItem value="Out for Delivery">Out for Delivery</SelectItem>
+                  <SelectItem value="Out for Delivery">
+                    Out for Delivery
+                  </SelectItem>
                   <SelectItem value="Delivered">Delivered</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             <div className="space-y-2">
               <Label htmlFor="amount">Amount paid</Label>
-              <Input
-                id="amount"
-                value={payment.amountPaid}
-                readOnly
-              />
+              <Input id="amount" value={payment.amountPaid} readOnly />
             </div>
           </div>
           <div className="space-y-2">
@@ -92,6 +86,5 @@ export function PaymentDetails({ payment, open, onClose }) {
         </div>
       </SheetContent>
     </Sheet>
-  )
+  );
 }
-

@@ -23,11 +23,11 @@ export default function PaymentsPage() {
         {/* Back Button */}
         <div className="flex items-center justify-between">
           <Button
-            variant="outline" // Use ShadCN Button variant
-            onClick={() => router.back()} // Navigate backward
+            variant="outline"
+            onClick={() => router.back()}
             className="flex items-center gap-2"
           >
-            <ArrowLeft className="h-4 w-4" /> {/* Lucide Icon */}
+            <ArrowLeft className="h-4 w-4" />
             Back
           </Button>
         </div>
