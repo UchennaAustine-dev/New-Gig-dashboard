@@ -5,7 +5,8 @@ const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Payment Dashboard",
-  description: "A modern payment dashboard built with Next.js and Tailwind CSS",
+  description:
+    "A modern payment dashboard built with Next.js , Tailwind CSS, Shadcn UI",
 };
 
 export default function RootLayout({ children }) {
